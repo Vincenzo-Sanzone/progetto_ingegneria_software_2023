@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="345.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cittadino.AccessoCittadino">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label fx:id="accessoErroreUtente" />
+    <Label text="Inserire il codice fiscale" />
+    <TextField fx:id="accessoCodiceFiscaleUtente" onKeyPressed="#invioAccessoUtente" />
+    <Label text="Inserire password" />
+    <PasswordField fx:id="accessoPasswordUtente" onKeyPressed="#invioAccessoUtente" />
+    <Button fx:id="bottoneAccessoUtente" alignment="CENTER" onAction="#sottomettiAccessoUtente" text="Accedi" />
+    <Button fx:id="bottoneRegistrazioneUtente" onAction="#registraUtente" text="Se non ti sei registrato clicca qui" />
+   <Button fx:id="bottoneIndietroAccessoUtente" mnemonicParsing="false" onAction="#tornaIndietroAccessoUtente" text="Torna indietro" />
+</VBox>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addetto.AccessoAddetto">
+   <children>
+      <Label fx:id="accessoErroreAddetto" text="Se non ricordi le credenziali contatta recupero.credenziali@gov.it">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Inserisci il nome utente">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="accessoNomeAddetto" alignment="CENTER" onKeyPressed="#invioAccessoAddetto">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </TextField>
+      <Label text="Inserisci la password">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Label>
+      <PasswordField fx:id="accessoPasswordAddetto" alignment="CENTER" onKeyPressed="#invioAccessoAddetto">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </PasswordField>
+      <Button fx:id="bottoneAccessoAddetto" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sottomettiAccessoAddetto" onKeyPressed="#sottomettiAccessoAddetto" text="Accedi">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Button>
+      <Button fx:id="bottoneIndietroAccessoAddetto" mnemonicParsing="false" onAction="#tornaIndietroAccessoAddetto" text="Torna indietro">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

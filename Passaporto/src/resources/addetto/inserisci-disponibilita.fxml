@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.*?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addetto.InserisciDisponibilita">
+   <children>
+      <Label fx:id="erroreDisponibilità" />
+      <SplitPane dividerPositions="0.49498327759197325" prefHeight="451.0" prefWidth="574.0">
+        <items>
+          <VBox alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Label fx:id="logAddetto" />
+                  <Label text="Scegli la tipologia di richiesta">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Inserisci sede">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Scegli il giorno">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Scegli la disponibilità oraria">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="bottoneIndietroInserisciDisponibilità" mnemonicParsing="false" onAction="#tornaIndietroDisponibilità" text="Torna indietro">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ComboBox fx:id="disponibilitaNonPrenotate" promptText="Disponibilità non prenotate (tipo, sede, giorno, ora, occorrenze)">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin></ComboBox>
+               </children></VBox>
+          <VBox alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <ComboBox fx:id="sceltaRichiesta" onKeyPressed="#invioDisponibilità">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="inserimentoCittà" onKeyPressed="#invioDisponibilità">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <DatePicker fx:id="sceltaGiorno" onKeyPressed="#invioDisponibilità">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <CheckComboBox fx:id="sceltaOrario" onKeyPressed="#invioDisponibilità">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </CheckComboBox>
+                  <Button fx:id="bottoneSottomettiDisponibilità" mnemonicParsing="false" onAction="#inserisciDisponibilità" text="Sottometti">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ComboBox fx:id="disponibilitaPrenotate" promptText="Disponibilità prenotate (tipo, sede, giorno, ora, occorrenze)">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+               </children></VBox>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>
